@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء بروفايل شركة احترافي - تميز عن المنافسين</title>
+    <meta name="description" content="خدمة متخصصة في كتابة وتصميم بروفايل شركة تعريفي محترف يعبر عن هوية علامتك التجارية باحترافية عالية">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #1a73e8;
+            --secondary-blue: #1557b0;
+            --light-blue: #f0f8ff;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Cairo', Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .header {
+            background: var(--primary-blue);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: var(--light-blue);
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--secondary-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .cta-button {
+            background: var(--primary-blue);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 2rem 0;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: var(--secondary-blue);
+        }
+
+        @media (max-width: 768px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+
+        .fa-icon {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">بروفايل شركة</div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>أنشئ بروفايل شركتك التعريفي باحترافية</h1>
+        <p>تميز عن منافسيك ببروفايل تعريفي جذاب يعكس قيم شركتك ويساعدك في جذب العملاء</p>
+        <a href="#contact" class="cta-button">اطلب خدمتك الآن</a>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <i class="fas fa-file-alt fa-icon"></i>
+            <h3>إنشاء بروفايل تعريفي متكامل</h3>
+            <p>صياغة محتوى احترافي يعبر عن رؤية ورسالة شركتك</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-chart-line fa-icon"></i>
+            <h3>تحسين محركات البحث</h3>
+            <p>دمج الكلمات المفتاحية لتحسين ظهور بروفايل شركتك</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-paint-brush fa-icon"></i>
+            <h3>تصميم جذاب</h3>
+            <p>عروض بصرية احترافية تعزز هوية علامتك التجارية</p>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animation on scroll
+        window.addEventListener('scroll', function() {
+            const features = document.querySelectorAll('.feature-card');
+            features.forEach(feature => {
+                const position = feature.getBoundingClientRect();
+                if(position.top < window.innerHeight) {
+                    feature.style.opacity = '1';
+                }
+            });
+        });
+
+        // Form submission handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('تم استلام طلبك بنجاح! سنتواصل معك خلال 24 ساعة.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

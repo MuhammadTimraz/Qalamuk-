@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محول المقال إلى HTML مع تنسيقات Word</title>
+    <style>
+        body {
+            direction: rtl;
+            font-family: 'Tajawal', sans-serif;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        #plainText {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            overflow-y: auto;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            background-color: #f0f0f0;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4682b4;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>محول المقال إلى HTML مع تنسيقات Word</h2>
+        <div id="plainText" contenteditable="true">
+            الصق هنا نصك المنسق من Word...
+        </div>
+        <button onclick="formatToHTML()">تحويل إلى HTML</button>
+        <h3>الناتج:</h3>
+        <textarea id="formattedHTML" readonly></textarea>
+    </div>
+
+    <script>
+        function formatToHTML() {
+            const inputArea = document.getElementById("plainText");
+            let formattedHTML = "";
+
+            const content = inputArea.innerHTML;
+
+            const tempDiv = document.createElement("div");
+            tempDiv.innerHTML = content;
+
+            tempDiv.querySelectorAll("*").forEach(element => {
+                const tagName = element.tagName.toLowerCase();
+
+                if (tagName === "strong" || tagName === "b") {
+                    element.outerHTML = `<strong>${element.textContent}</strong>`;
+                } else if (tagName === "em" || tagName === "i") {
+                    element.outerHTML = `<em>${element.textContent}</em>`;
+                } else if (tagName === "h1" || tagName === "h2" || tagName === "h3") {
+                    element.outerHTML = `<${tagName}>${element.textContent}</${tagName}>`;
+                } else if (tagName === "p") {
+                    element.outerHTML = `<p>${element.textContent}</p>`;
+                }
+            });
+
+            formattedHTML = tempDiv.innerHTML;
+
+            document.getElementById("formattedHTML").value = formattedHTML;
+        }
+    </script>
+</body>
+</html>

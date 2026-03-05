@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدونة الشركة</title>
+    <link rel="stylesheet" href="QalamukBlog.css">
+    <style>
+        /* التعديلات الجديدة للهيدر */
+        .main-header {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            text-align: center; /* محاذاة النص للوسط */
+        }
+        
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center; /* تغيير المحاذاة للوسط */
+            gap: 50px; /* زيادة المسافة بين العناصر */
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 18px; /* حجم خط أكبر */
+        }
+        
+        .nav-links a:hover {
+            color: #007bff;
+            border-bottom: 2px solid #007bff; /* إضافة تأثير عند الhover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر المحدث -->
+    <header class="main-header">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">الصفحة الرئيسية</a></li>
+                <li><a href="services.html">خدماتنا</a></li>
+                <li><a href="about.html">نبذة عن قلمك</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="blog-section" style="margin-top: 80px;">
+        <h2 class="section-title">مدونة الشركة</h2>
+        <div class="blog-container">
+            <!-- بقية المحتوى كما هو -->
+            <!-- بطاقة مقال -->
+            <div class="blog-card">
+                <img src="../Images/firstgig.png" alt="كيف تكتب بروفايل شركة احترافي ">
+                <div class="blog-content">
+                    <h3>كيف تكتب بروفايل شركة احترافي </h3>
+                    <p>عندما تبدأ تأسيس مشروعك تبدأ في البحث عن كيفية كتابة بروفايل شركة احترافي؛ لأنه بمنزلة السيرة الذاتية للشركات....</p>
+                    <a href="../Blog/Blog1.html" class="read-more">اقرأ المزيد</a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <img src="article2.jpg" alt="عنوان المقال">
+                <div class="blog-content">
+                    <h3>عنوان المقال الثاني</h3>
+                    <p>نبذة قصيرة عن المقال تشرح الفكرة الرئيسية وتجذب القارئ...</p>
+                    <a href="article2.html" class="read-more">اقرأ المزيد</a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <img src="article3.jpg" alt="عنوان المقال">
+                <div class="blog-content">
+                    <h3>عنوان المقال الثالث</h3>
+                    <p>نبذة قصيرة عن المقال تشرح الفكرة الرئيسية وتجذب القارئ...</p>
+                    <a href="article3.html" class="read-more">اقرأ المزيد</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كتابة بروفايل شركة محترف - قلمك</title>
+    <meta name="description" content="احصل على بروفايل شركة مميز يعكس هويتك - كتابة احترافية مع ضمان SEO وتحسين معدل التحويل">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #2A5D84;
+            --accent-color: #FF6B35;
+            --gradient: linear-gradient(45deg, #2A5D84, #3B8BEB);
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Tahoma', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            line-height: 1.8;
+            position: relative;
+        }
+
+        /* Header Animation */
+        .header {
+            background: var(--gradient);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            animation: slideIn 1s ease-out;
+        }
+
+        /* Feature Cards Hover Effect */
+        .feature-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Floating CTA Button */
+        .floating-cta {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            background: var(--accent-color);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            color: white!important;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(255,107,53,0.4);
+            animation: pulse 2s infinite;
+            z-index: 1000;
+        }
+
+        /* Price Tag Design */
+        .price-container {
+            background: linear-gradient(45deg, #fff, #f8f9fa);
+            border: 2px solid var(--primary-color);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem auto;
+            max-width: 500px;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        /* Keyframe Animations */
+        @keyframes slideIn {
+            from { transform: translateY(-100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Enhanced FAQ Section */
+        .faq-item {
+            transition: all 0.3s;
+        }
+
+        .faq-item:hover {
+            background: rgba(42,93,132,0.05);
+        }
+
+        .answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .answer.active {
+            max-height: 200px;
+        }
+
+        /* New Order Button Style */
+        .cta-button {
+            background: var(--accent-color);
+            color: white!important;
+            padding: 1rem 3rem;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 1rem 0;
+            transition: transform 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            border-color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating CTA -->
+    <a href="#order" class="floating-cta">
+        <i class="fas fa-shopping-cart"></i> اطلب الآن
+    </a>
+
+    <header class="header">
+        <h1>بروفايل شركة يجذب عملاء <span style="color: #FFD700">أكثر بـ 300%</span></h1>
+        <p>وصف مختصر وقوي يبرز الفوائد الأساسية</p>
+        <a href="#order" class="cta-button">ابدأ الآن - احجز موعدك</a>
+    </header>
+
+    <!-- Social Proof Section -->
+    <section class="service-section" style="text-align: center; padding: 2rem">
+        <div class="social-proof">
+            <div class="stat-item">
+                <h3 style="color: var(--accent-color)">+500</h3>
+                <p>بروفايل تم انجازه</p>
+            </div>
+            <div class="stat-item">
+                <h3 style="color: var(--accent-color)">98%</h3>
+                <p>رضا العملاء</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Features Section -->
+    <section class="features service-section">
+        <div class="feature-card">
+            <i class="fas fa-chart-line fa-3x" style="color: var(--accent-color)"></i>
+            <h3>تحسين محركات البحث</h3>
+            <p>تصدر النتائج الأولى مع تقنيات SEO متقدمة</p>
+        </div>
+        
+        <div class="feature-card">
+            <i class="fas fa-edit fa-3x" style="color: var(--accent-color)"></i>
+            <h3>تعديلات مجانية</h3>
+            <p>3 مراجعات للتعديلات حتى الرضا التام</p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="service-section">
+        <div class="price-container">
+            <h2>استثمر في صورتك الاحترافية</h2>
+            <div class="price">499 ر.س</div>
+            <p>تشمل:</p>
+            <ul>
+                <li>بحث كامل عن الشركة</li>
+                <li>3 مسودات مختلفة</li>
+                <li>تحسين SEO متكامل</li>
+            </ul>
+            <a href="#order" class="cta-button">احصل على العرض الآن</a>
+        </div>
+    </section>
+
+    <!-- Enhanced FAQ -->
+    <section class="faq-section">
+        <h2 style="text-align: center; margin-bottom: 2rem">أسئلتكم.. إجاباتنا</h2>
+        <div class="faq-item">
+            <div class="question"><i class="fas fa-question-circle"></i> كم تستغرق مدة التنفيذ؟</div>
+            <div class="answer">تتراوح المدة بين 3-5 أيام عمل</div>
+        </div>
+        <!-- Add more FAQs -->
+    </section>
+
+    <script>
+        // Enhanced FAQ Toggle
+        document.querySelectorAll('.question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                answer.classList.toggle('active');
+                item.querySelector('i').classList.toggle('fa-rotate-90');
+            })
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- Add this before closing body -->
+    <div style="background: var(--primary-color); color: white; padding: 2rem; text-align: center">
+        <h3>لا تتردد! احجز الآن واحصل على:</h3>
+        <p>✔️ استشارة مجانية بقيمة 200 ر.س</p>
+        <p>✔️ خصم 20% للطلبات الفورية</p>
+        <a href="#order" class="cta-button">اطلب خلال الدقائق القادمة واحصل على الخصم</a>
+    </div>
+</body>
+</html>

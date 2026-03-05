@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="كتابة، محتوى تعريفي، بروفايل تعريفي، محتوى الموقع، سكريبت، سيناريو، خدمات" keywords"="" name="description"/>
+  <title>
+   قلمك | مبدعو المحتوى الترويجي
+  </title>
+  
+  <!-- Stylesheets -->
+  <link href="Blog.css" rel="stylesheet"/>
+  <!-- Add icon library -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&amp;display=swap" rel="stylesheet"/>
+
+ </head>
+ <body>
+  <div class="main-wrapper">
+   <header id="header">
+    <div class="container">
+     <nav>
+      <ul class="main_menu clearfix" style="margin-inline-start: 300px;">
+       <li>
+        <a class="page-scroll" href="../QalamukNew.html">
+         الصفحة الرئيسية
+        </a>
+       </li>
+       <li>
+        <a class="page-scroll" href="QalamukNew.html#services-section">
+         خدماتنا
+        </a>
+       </li>
+       <li>
+        <a class="page-scroll" href="#">
+         ما يميزنا؟
+        </a>
+       </li>
+       <li class="dropdown">
+        <a class="page-scroll" style="background: #07ba80;">
+         أعمالنا
+        </a>
+       </li>
+      </ul>
+     </nav>
+     <div class="opt-mobail">
+      <button aria-label="قائمة التنقل" class="hamburger" type="button">
+       <span class="hamb-top">
+       </span>
+       <span class="hamb-middle">
+       </span>
+       <span class="hamb-bottom">
+       </span>
+      </button>
+     </div>
+    </div>
+   </header>
+   <!--Blog-->
+   <section class="blog-container">
+    <div class="blog-container">
+        <div class="blog-card">
+            <img src="../Images/firstgig.png" alt="مقال 1">
+            <div class="blog-content">
+                <h3>كيف تكتب بروفايل شركة احترافي؟</h3>
+                <p>عندما تبدأ تأسيس مشروعك تبدأ في البحث عن كيفية كتابة بروفايل شركة احترافي؛ لأنه بمنزلة السيرة الذاتية للشركات. </p>
+                <a href="Article.html" class="read-more-btn">اقرأ المزيد</a>
+            </div>
+        </div>
+    
+        <div class="blog-card">
+            <img src="../Images/firstgig.png" alt="مقال 2">
+            <div class="blog-content">
+                <h3>عنوان المقال الثاني</h3>
+                <p>وصف موجز لمحتوى المقال الثاني لتشجيع القراءة.</p>
+                <a href="#" class="read-more-btn">اقرأ المزيد</a>
+            </div>
+        </div>
+    
+        <div class="blog-card">
+            <img src="../Images/firstgig.png" alt="مقال 3">
+            <div class="blog-content">
+                <h3>عنوان المقال الثالث</h3>
+                <p>نص مختصر يلخص النقاط الرئيسية للمقال الثالث.</p>
+                <a href="#" class="read-more-btn">اقرأ المزيد</a>
+            </div>
+        </div>
+    
+        <div class="blog-card">
+            <img src="../Images/firstgig.png" alt="مقال 4">
+            <div class="blog-content">
+                <h3>عنوان المقال الرابع</h3>
+                <p>وصف مختصر لمحتوى المقال الرابع بطريقة مشوقة.</p>
+                <a href="#" class="read-more-btn">اقرأ المزيد</a>
+            </div>
+        </div>
+    
+        <div class="blog-card">
+            <img src="../Images/firstgig.png" alt="مقال 5">
+            <div class="blog-content">
+                <h3>عنوان المقال الخامس</h3>
+                <p>ملخص سريع لمحتوى المقال الخامس لجذب القارئ.</p>
+                <a href="#" class="read-more-btn">اقرأ المزيد</a>
+            </div>
+        </div>
+    
+        <div class="blog-card">
+            <img src="../Images/firstgig.png" alt="مقال 6">
+            <div class="blog-content">
+                <h3>عنوان المقال السادس</h3>
+                <p>مقدمة مختصرة توضح أبرز نقاط المقال السادس.</p>
+                <a href="#" class="read-more-btn">اقرأ المزيد</a>
+            </div>
+        </div>
+    
+   </section>
+   <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const blogCards = document.querySelectorAll('.blog-card');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 200);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        blogCards.forEach(card => {
+            observer.observe(card);
+        });
+    });
+  </script>
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="footer-container">
+         <div class="footer-section about">
+          <h4>
+           عن قلمك
+          </h4>
+          <p>
+           منصة عربية متخصصة في تقديم حلول المحتوى الإبداعي منذ 2015، نقدم خدمات كتابة محتوى احترافية للشركات والأفراد
+          </p>
+          <div class="social-icons">
+           <a href="#">
+            <i class="fab fa-twitter">
+            </i>
+           </a>
+           <a href="#">
+            <i class="fab fa-linkedin">
+            </i>
+           </a>
+           <a href="#">
+            <i class="fab fa-instagram">
+            </i>
+           </a>
+          </div>
+         </div>
+         <div class="footer-section links">
+          <h4>
+           روابط سريعة
+          </h4>
+          <ul>
+           <li>
+            <a href="#">
+             <i class="fas fa-chevron-left">
+             </i>
+             الخدمات
+            </a>
+           </li>
+           <li>
+            <a href="#">
+             <i class="fas fa-chevron-left">
+             </i>
+             المشاريع
+            </a>
+           </li>
+           <li>
+            <a href="#">
+             <i class="fas fa-chevron-left">
+             </i>
+             المدونة
+            </a>
+           </li>
+           <li>
+            <a href="#">
+             <i class="fas fa-chevron-left">
+             </i>
+             اتصل بنا
+            </a>
+           </li>
+          </ul>
+         </div>
+         <div class="footer-section contact">
+          <h4>
+           تواصل معنا
+          </h4>
+          <ul>
+           <li>
+            <i class="fas fa-phone">
+            </i>
+            966 55 123 4567
+           </li>
+           <li>
+            <i class="fas fa-envelope">
+            </i>
+            info@qalamak.com
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="footer-bottom">
+         <p>
+          جميع الحقوق محفوظة &copy; 2023 قلمك. تطوير
+          <a href="#">
+           Qalamak Team
+          </a>
+         </p>
+        </div>
+       </footer>
+      </div>
+     </body>
+    </html>

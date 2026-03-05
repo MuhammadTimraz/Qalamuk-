@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>كتابة بروفايل احترافي</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+
+    header {
+      background: #0066cc;
+      color: #fff;
+      padding: 20px;
+      text-align: right;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+    }
+
+    header nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    header nav ul li {
+      display: inline;
+      margin-left: 20px;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    #intro {
+      margin-top: 100px;
+      text-align: center;
+      padding: 50px;
+      background-color: #ffffff;
+      color: #333;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      background-image:url(../Images/icons-bar.jpg);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    #intro h1 {
+      color: #0066cc;
+      font-size: 2.5em;
+    }
+
+    /* زر CTA ثابت على الجنب */
+    .cta-btn {
+      background-color: #0066cc;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+      font-weight: bold;
+      position: fixed;
+      bottom: 20px;
+      left: 20px; /* تعديل ليمر الزر على الجهة اليسرى */
+      transition: background-color 0.3s, transform 0.3s;
+      z-index: 1000;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .cta-btn:hover {
+      background-color: #0055a3;
+      transform: scale(1.1);
+    }
+
+    .cta-btn.floating {
+      background-color: #ff5722; /* تغيير اللون عند الوصول للفوتر */
+    }
+
+    /* قسم الأعمال السابقة */
+    #previous-work {
+      background-color: #f9f9f9;
+      padding: 40px;
+      text-align: center;
+    }
+
+    #previous-work h2 {
+      color: #0066cc;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .work-item {
+      display: inline-block;
+      margin: 20px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 250px;
+      height: 250px;
+      overflow: hidden;
+    }
+
+    .work-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .work-item a {
+      display: inline-block;
+      background-color: #0066cc;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .work-item a:hover {
+      background-color: #0055a3;
+    }
+
+    /* الأسئلة الشائعة */
+    #faq {
+      background-color: #f9f9f9;
+      padding: 40px;
+      text-align: center;
+    }
+
+    #faq h2 {
+      color: #0066cc;
+      font-size: 2em;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+
+    .faq-item h3 {
+      padding: 15px;
+      background-color: #0066cc;
+      color: white;
+      font-size: 1.2em;
+      cursor: pointer;
+      margin: 0;
+      transition: background-color 0.3s;
+    }
+
+    .faq-item h3:hover {
+      background-color: #004b99;
+    }
+
+    .faq-item p {
+      padding: 15px;
+      font-size: 1em;
+      color: #555;
+      display: none;
+    }
+
+    .faq-item.open p {
+      display: block;
+    }
+
+    /* النصوص الإقناعية */
+    .persuasive-text {
+      margin: 50px 0;
+      padding: 20px;
+      background-color: #ffffff;
+      color: #333;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    .persuasive-text h3 {
+      color: #0066cc;
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+
+    .persuasive-text p {
+      font-size: 1.1em;
+      line-height: 1.8;
+    }
+
+    /* تحسين الـCTA */
+    #cta {
+      background-color: #0066cc;
+      color: white;
+      padding: 50px;
+      text-align: center;
+    }
+
+    #cta h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">الصفحة الرئيسية</a></li>
+        <li><a href="#services">الخدمات</a></li>
+        <li><a href="#blog">المدونة</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- قسم المقدمة -->
+  <section id="intro">
+    <h1>كتابة بروفايل مميز واحترافي</h1>
+    <p>اعرض نفسك بطريقة احترافية مع بروفايل مكتوب بعناية يعكس مهاراتك وطموحاتك.</p>
+  </section>
+
+  <!-- النصوص الإقناعية -->
+  <section class="persuasive-text">
+    <h3>لماذا تحتاج بروفايل احترافي؟</h3>
+    <p>كل شخص يبحث عن التميز، وبروفايلك هو أول انطباع تتركه لدى العملاء. بروفايل احترافي يعكس مهاراتك وشخصيتك بأفضل صورة.</p>
+  </section>
+
+  <section class="persuasive-text">
+    <h3>كيف نساعدك؟</h3>
+    <p>نحن نكتب بروفايل يعكس قدراتك الحقيقية ويظهر أفضل جوانب شخصيتك بطريقة جذابة وسهلة القراءة.</p>
+  </section>
+
+  <!-- قسم الأعمال السابقة -->
+  <section id="previous-work">
+    <h2>أعمالنا السابقة</h2>
+    <div class="work-item">
+      <img src="../Images/firstgig.png" alt="العمل السابق 1">
+      <a href="work1.pdf" target="_blank">عرض بروفايل 1</a>
+    </div>
+    <div class="work-item">
+      <img src="image2.jpg" alt="العمل السابق 2">
+      <a href="work2.pdf" target="_blank">عرض بروفايل 2</a>
+    </div>
+    <div class="work-item">
+      <img src="image3.jpg" alt="العمل السابق 3">
+      <a href="work3.pdf" target="_blank">عرض بروفايل 3</a>
+    </div>
+  </section>
+
+  <!-- الأسئلة الشائعة -->
+  <section id="faq">
+    <h2>الأسئلة الشائعة</h2>
+    <div class="faq-item">
+      <h3>كيف يمكنني طلب الخدمة؟</h3>
+      <p>يمكنك طلب الخدمة عبر النقر على الزر في الأسفل وملء النموذج المخصص لذلك.</p>
+    </div>
+    <div class="faq-item">
+      <h3>ما هي المدة المتوقعة للحصول على البروفايل؟</h3>
+      <p>سوف تستلم البروفايل الخاص بك خلال 3-5 أيام عمل.</p>
+    </div>
+  </section>
+
+  <!-- دعوة للعمل -->
+  <section id="cta">
+    <h2>هل أنت مستعد لتحسين بروفايلك؟</h2>
+  </section>
+
+  <!-- زر CTA ثابت -->
+  <a href="#order" class="cta-btn">اطلب الآن</a>
+
+  <script>
+    // Toggle FAQ answer on click
+    document.querySelectorAll('.faq-item h3').forEach(item => {
+      item.addEventListener('click', () => {
+        item.parentElement.classList.toggle('open');
+      });
+    });
+
+    // تغيير لون الزر عند النزول للفوتر
+    const ctaBtn = document.querySelector('.cta-btn');
+    const footer = document.querySelector('#cta');
+
+    window.addEventListener('scroll', function() {
+      if (window.scrollY + window.innerHeight >= document.body.scrollHeight) {
+        ctaBtn.classList.add('floating');
+      } else {
+        ctaBtn.classList.remove('floating');
+      }
+    });
+  </script>
+
+</body>
+</html>
